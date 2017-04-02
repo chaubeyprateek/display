@@ -619,7 +619,8 @@ void MDPCompNonSplit::generateROI(hwc_context_t *ctx,
         return;
 
     struct hwc_rect roi = (struct hwc_rect){0, 0, 0, 0};
-    hwc_rect fullFrame = (struct hwc_rect) {0, 0,(int)ctx->dpyAttr[mDpy].xres,
+    hwc_rect fullFrame;
+    fullFrame = (struct hwc_rect) {0, 0,(int)ctx->dpyAttr[mDpy].xres,
         (int)ctx->dpyAttr[mDpy].yres};
 
     for(int index = 0; index < numAppLayers; index++ ) {

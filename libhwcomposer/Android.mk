@@ -21,7 +21,7 @@ LOCAL_SHARED_LIBRARIES        := $(common_libs) libEGL liboverlay \
                                  libbinder libmedia
 
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdhwcomposer\" -Wno-absolute-value \
-                                 -Wno-float-conversion
+                                 -Wno-float-conversion -Wno-unused-parameter
 
 ifeq ($(TARGET_USES_QCOM_BSP),true)
 LOCAL_SHARED_LIBRARIES += libskia
