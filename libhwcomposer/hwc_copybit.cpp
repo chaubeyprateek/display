@@ -207,8 +207,9 @@ bool CopyBit::prepareSwapRect(hwc_context_t *ctx,
    bool canUseSwapRect = 0;
    hwc_rect_t dirtyRect = {0, 0, 0, 0};
    hwc_rect_t displayRect = {0, 0, 0, 0};
-   hwc_rect fullFrame = (struct hwc_rect) {0, 0,(int)ctx->dpyAttr[dpy].xres,
-                                                (int)ctx->dpyAttr[dpy].yres};
+   hwc_rect fullFrame;
+   fullFrame = (struct hwc_rect) {0, 0,(int)ctx->dpyAttr[dpy].xres,
+                                             (int)ctx->dpyAttr[dpy].yres};
    if((mLayerCache.layerCount != ctx->listStats[dpy].numAppLayers) ||
          list->flags & HWC_GEOMETRY_CHANGED || not mSwapRectEnable) {
         mLayerCache.reset();
