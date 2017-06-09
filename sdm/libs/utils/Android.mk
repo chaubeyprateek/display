@@ -3,7 +3,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE                  := libsdmutils
 LOCAL_MODULE_TAGS             := optional
-LOCAL_C_INCLUDES              := hardware/qcom/display/sdm/include/
+LOCAL_C_INCLUDES              := hardware/qcom/display-caf-msm8937/sdm/include/
 LOCAL_CFLAGS                  := -Wno-missing-field-initializers \
                                  -Wall -Werror -std=c++11 -fcolor-diagnostics\
                                  -DLOG_TAG=\"SDM\"
