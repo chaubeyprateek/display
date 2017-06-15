@@ -7,8 +7,11 @@ LOCAL_MODULE_RELATIVE_PATH    := hw
 LOCAL_MODULE_TAGS             := optional
 LOCAL_C_INCLUDES              := $(common_includes) $(kernel_includes) \
                                  $(TOP)/external/skia/include/core \
-                                 $(TOP)/external/skia/include/images
-LOCAL_CLANG := false
+                                 $(TOP)/external/skia/include/images \
+                                 frameworks/native/libs/arect/include
+
+#LOCAL_CLANG := false
+
 ifeq ($(strip $(TARGET_USES_QCOM_DISPLAY_PP)),true)
 LOCAL_C_INCLUDES              += $(TARGET_OUT_HEADERS)/qdcm/inc \
                                  $(TARGET_OUT_HEADERS)/common/inc \
